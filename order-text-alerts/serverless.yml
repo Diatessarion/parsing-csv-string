@@ -80,6 +80,13 @@ functions:
       - http:
           path: ingest
           method: get
+  request_proper_sms:
+    handler: handler.request_proper_sms
+    package: {serverless-python-requirements, serverless-dotenv-plugin}
+    events:
+      - http:
+          path: requestsms
+          method: get
 
 plugins:
   - serverless-python-requirements
