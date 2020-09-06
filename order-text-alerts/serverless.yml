@@ -87,6 +87,13 @@ functions:
       - http:
           path: requestsms
           method: get
+  get_message:
+    handler: dynamo_tests.get_message
+    package: {serverless-python-requirements, serverless-dotenv-plugin}
+    events:
+      - http:
+          path: getmessage
+          method: get
 
 plugins:
   - serverless-python-requirements
